@@ -1,0 +1,4 @@
+50,Physics,20
+42,Math,02
+1B,Chem,04
+67,Psychology,04

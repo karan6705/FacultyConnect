@@ -1,0 +1,153 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane prefHeight="400.0" prefWidth="600.0" style="-fx-background-color: white;"
+            xmlns="http://javafx.com/javafx/23.0.1"
+            xmlns:fx="http://javafx.com/fxml/1"
+            fx:controller="s25.cs151.application.controllers.HomeController">
+   <children>
+      <HBox prefHeight="400.0" prefWidth="600.0"
+            AnchorPane.bottomAnchor="0.0"
+            AnchorPane.leftAnchor="0.0"
+            AnchorPane.rightAnchor="0.0"
+            AnchorPane.topAnchor="0.0">
+         <children>
+            <VBox alignment="CENTER_LEFT" prefHeight="370.0" prefWidth="445.0" spacing="15.0">
+               <children>
+                  <!-- spacer -->
+                  <VBox prefHeight="139.0" prefWidth="394.0" />
+
+                  <!-- Your Semesters -->
+                  <HBox prefHeight="100.0" prefWidth="200.0">
+                     <children>
+                        <Button fx:id="editOfficeHoursButton"
+                                alignment="CENTER"
+                                onAction="#handleEditOfficeHours"
+                                prefHeight="25.0" prefWidth="130.0"
+                                text="Your Semesters">
+                           <font>
+                              <Font name="Times New Roman" size="13.0" />
+                           </font>
+                        </Button>
+                     </children>
+                  </HBox>
+
+                  <!-- Your Courses -->
+                  <HBox prefHeight="100.0" prefWidth="200.0">
+                     <children>
+                        <Button fx:id="editCoursesButton"
+                                alignment="CENTER"
+                                onAction="#handleEditCourses"
+                                prefHeight="25.0" prefWidth="130.0"
+                                text="Your Courses">
+                           <font>
+                              <Font name="Times New Roman" size="13.0" />
+                           </font>
+                        </Button>
+                     </children>
+                  </HBox>
+
+                  <!-- Your Time Slots -->
+                  <HBox prefHeight="100.0" prefWidth="200.0">
+                     <children>
+                        <Button fx:id="editTimeSlotsButton"
+                                alignment="CENTER"
+                                onAction="#handleEditTimeSlots"
+                                prefHeight="25.0" prefWidth="130.0"
+                                text="Your Time Slots">
+                           <font>
+                              <Font name="Times New Roman" size="13.0" />
+                           </font>
+                        </Button>
+                     </children>
+                  </HBox>
+
+                  <!-- Add Appointment -->
+                  <HBox prefHeight="100.0" prefWidth="200.0">
+                     <children>
+                        <Button fx:id="addAppointmentButton"
+                                alignment="CENTER"
+                                onAction="#handleAddAppointment"
+                                prefHeight="25.0" prefWidth="130.0"
+                                text="Add Appointment">
+                           <font>
+                              <Font name="Times New Roman" size="13.0" />
+                           </font>
+                        </Button>
+                     </children>
+                  </HBox>
+
+                  <!-- View Schedule -->
+                  <HBox prefHeight="100.0" prefWidth="200.0">
+                     <children>
+                        <Button fx:id="viewScheduleButton"
+                                alignment="CENTER"
+                                onAction="#handleViewSchedule"
+                                prefHeight="25.0" prefWidth="130.0"
+                                text="View Schedule">
+                           <font>
+                              <Font name="Times New Roman" size="13.0" />
+                           </font>
+                        </Button>
+                     </children>
+                  </HBox>
+
+                  <!-- NEW: Edit Office Hours -->
+                  <HBox prefHeight="100.0" prefWidth="200.0">
+                     <children>
+                        <Button fx:id="editApptsButton"
+                                alignment="CENTER"
+                                onAction="#handleEditAppointments"
+                                prefHeight="25.0" prefWidth="130.0"
+                                text="Edit Office Hours">
+                           <font>
+                              <Font name="Times New Roman" size="13.0" />
+                           </font>
+                        </Button>
+                     </children>
+                  </HBox>
+
+                  <!-- Search Schedule -->
+                  <HBox prefHeight="100.0" prefWidth="200.0">
+                     <children>
+                        <Button fx:id="searchScheduleButton"
+                                alignment="CENTER"
+                                onAction="#handleSearchSchedule"
+                                prefHeight="25.0" prefWidth="130.0"
+                                text="Search Schedule">
+                           <font>
+                              <Font name="Times New Roman" size="13.0" />
+                           </font>
+                        </Button>
+                     </children>
+                  </HBox>
+
+               </children>
+               <VBox.margin>
+                  <Insets bottom="15.0" left="10.0" top="15.0" />
+               </VBox.margin>
+            </VBox>
+
+            <!-- Logo pane -->
+            <VBox alignment="TOP_CENTER" prefHeight="400.0" prefWidth="247.0">
+               <children>
+                  <ImageView fitHeight="150.0" fitWidth="200.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@images/logo2.png" />
+                     </image>
+                  </ImageView>
+               </children>
+            </VBox>
+
+         </children>
+      </HBox>
+   </children>
+</AnchorPane>

@@ -1,0 +1,10 @@
+Max Million,2025-05-03,10:00 - 12:00,42-02,HW Q,
+Max Million,2025-04-14,06:15 - 07:15,50-20,,
+Jordan Maison,2025-05-28,12:00 - 13:15,50-20,Final Redo,
+Jordan Maison,2025-05-03,17:30 - 18:15,50-20,,Bring rubric
+Lily Flower,2025-05-03,12:00 - 13:15,67-04,,
+Lily Flower,2025-03-10,15:00 - 16:30,1B-04,Project Review,
+Marie Marian,2025-05-15,10:00 - 12:00,1B-04,,
+Marie Marian,2025-05-19,12:00 - 13:15,1B-04,HW Help,
+Rosy Rose,2025-05-24,17:30 - 18:15,1B-04,Discuss grade,
+Rosy Rose,2025-05-30,06:15 - 07:15,50-20,,

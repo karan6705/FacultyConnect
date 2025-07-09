@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<VBox alignment="CENTER" spacing="10" style="-fx-background-color: white;" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="s25.cs151.application.controllers.DefineCoursesController">
+   <Label text="Enter Your Courses" textFill="#b01313">
+      <VBox.margin>
+         <Insets top="10.0" />
+      </VBox.margin>
+      <font>
+         <Font name="Kailasa Bold" size="18.0" />
+      </font>
+   </Label>
+
+    <!-- Input Fields -->
+    <HBox spacing="10">
+        <TextField fx:id="courseCodeField" promptText="Course Code" style="-fx-border-color: black;">
+         <HBox.margin>
+            <Insets />
+         </HBox.margin>
+         <font>
+            <Font name="Times New Roman Italic" size="13.0" />
+         </font></TextField>
+        <TextField fx:id="courseNameField" promptText="Course Name" style="-fx-border-color: black;">
+         <font>
+            <Font name="Times New Roman Italic" size="13.0" />
+         </font></TextField>
+        <TextField fx:id="sectionField" promptText="Section" style="-fx-border-color: black;">
+         <font>
+            <Font name="Times New Roman Italic" size="13.0" />
+         </font></TextField>
+      <VBox.margin>
+         <Insets left="15.0" right="15.0" />
+      </VBox.margin>
+    </HBox>
+
+    <!-- Buttons -->
+    <HBox spacing="10">
+        <Button fx:id="addCourseButton" onAction="#addCourse" text="Add Course">
+         <font>
+            <Font name="Times New Roman Bold" size="13.0" />
+         </font></Button>
+        <Button fx:id="backButton" onAction="#handleBack" text="Back">
+         <font>
+            <Font name="Times New Roman" size="13.0" />
+         </font></Button>
+      <VBox.margin>
+         <Insets left="15.0" right="15.0" />
+      </VBox.margin>
+    </HBox>
+
+    <!-- TableView to display courses -->
+    <TableView fx:id="coursesTable" prefHeight="300" prefWidth="500">
+        <columns>
+            <TableColumn fx:id="codeColumn" prefWidth="150" text="Course Code" />
+            <TableColumn fx:id="nameColumn" prefWidth="200" text="Course Name" />
+            <TableColumn fx:id="sectionColumn" prefWidth="150" text="Section" />
+        </columns>
+    </TableView>
+</VBox>

@@ -1,0 +1,4 @@
+Winter,2025,Tue Fri
+Fall,2024,Tue Thu
+Summer,2023,Mon Fri
+Spring,2022,Wed Thu

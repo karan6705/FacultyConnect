@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<VBox xmlns="http://javafx.com/javafx/8"
+      xmlns:fx="http://javafx.com/fxml/1"
+      fx:controller="s25.cs151.application.controllers.ManageAppointmentsController"
+      spacing="10" alignment="CENTER" prefWidth="600" prefHeight="400">
+
+    <!-- Search + Edit Selected + Back -->
+    <HBox spacing="5" alignment="CENTER">
+        <Label text="Search:"/>
+        <TextField fx:id="searchField"
+                   promptText="Enter student name"
+                   prefWidth="200"/>
+        <Button text="Edit Selected"
+                onAction="#handleEditSelected"/>
+        <Button text="Back"
+                onAction="#handleBack"/>
+    </HBox>
+
+    <!-- TableView without Delete column -->
+    <TableView fx:id="scheduleTable"
+               prefHeight="320" prefWidth="580">
+        <columns>
+            <TableColumn fx:id="studentNameCol"
+                         text="Student"
+                         prefWidth="120"/>
+            <TableColumn fx:id="dateCol"
+                         text="Date"
+                         prefWidth="80"/>
+            <TableColumn fx:id="timeSlotCol"
+                         text="Time Slot"
+                         prefWidth="100"/>
+            <TableColumn fx:id="courseCol"
+                         text="Course"
+                         prefWidth="80"/>
+            <TableColumn fx:id="reasonCol"
+                         text="Reason"
+                         prefWidth="100"/>
+            <TableColumn fx:id="commentCol"
+                         text="Comment"
+                         prefWidth="100"/>
+        </columns>
+    </TableView>
+</VBox>

@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<VBox xmlns:fx="http://javafx.com/fxml" fx:controller="s25.cs151.application.controllers.ViewScheduleController" spacing="10" alignment="CENTER" prefWidth="600" prefHeight="400">
+    <TabPane fx:id="tabPane" prefWidth="600" prefHeight="350">
+        <tabs>
+            <!-- Tab for Original Office Hours -->
+            <Tab text="Office Hours">
+                <VBox spacing="10" alignment="CENTER">
+                    <TableView fx:id="officeHoursTable" prefWidth="500" prefHeight="300">
+                        <columns>
+                            <TableColumn fx:id="yearCol" text="Year" prefWidth="150"/>
+                            <TableColumn fx:id="semCol" text="Semester" prefWidth="150"/>
+                            <TableColumn fx:id="dayCol" text="Days" prefWidth="200"/>
+                        </columns>
+                    </TableView>
+                </VBox>
+            </Tab>
+            <!-- New Tab for Office Hours Schedule (Appointments) -->
+            <Tab text="Office Hours Schedule">
+                <VBox spacing="10" alignment="CENTER">
+                    <TableView fx:id="scheduleTable" prefWidth="500" prefHeight="300">
+                        <columns>
+                            <TableColumn fx:id="studentNameCol" text="Student Name" prefWidth="100"/>
+                            <TableColumn fx:id="dateCol" text="Date" prefWidth="100"/>
+                            <TableColumn fx:id="timeSlotCol" text="Time Slot" prefWidth="100"/>
+                            <TableColumn fx:id="courseCol" text="Course" prefWidth="100"/>
+                            <TableColumn fx:id="reasonCol" text="Reason" prefWidth="100"/>
+                            <TableColumn fx:id="commentCol" text="Comment" prefWidth="100"/>
+                        </columns>
+                    </TableView>
+                </VBox>
+            </Tab>
+        </tabs>
+    </TabPane>
+
+    <!-- Back Button -->
+    <Button text="Back" onAction="#handleBack" />
+</VBox>

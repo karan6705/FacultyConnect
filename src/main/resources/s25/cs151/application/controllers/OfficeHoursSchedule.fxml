@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.DatePicker?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.HBox?>
+
+<GridPane xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1"
+          fx:controller="s25.cs151.application.controllers.AddAppointmentController"
+          hgap="10" vgap="10">
+    <!-- Define padding using a nested Insets element -->
+    <padding>
+        <Insets top="20" right="20" bottom="20" left="20"/>
+    </padding>
+
+    <!-- Column constraints: left column for labels (right-aligned) and right column for controls -->
+    <columnConstraints>
+        <ColumnConstraints halignment="RIGHT" minWidth="150"/>
+        <ColumnConstraints hgrow="ALWAYS"/>
+    </columnConstraints>
+
+    <!-- Row 0: Student Full Name -->
+    <Label text="Enter Student Full Name:" GridPane.rowIndex="0" GridPane.columnIndex="0"/>
+    <TextField fx:id="studentNameField" GridPane.rowIndex="0" GridPane.columnIndex="1"
+               promptText="e.g., John Doe"/>
+
+    <!-- Row 1: Schedule Date -->
+    <Label text="Schedule Date:" GridPane.rowIndex="1" GridPane.columnIndex="0"/>
+    <DatePicker fx:id="scheduleDatePicker" GridPane.rowIndex="1" GridPane.columnIndex="1"
+                promptText="Select Date"/>
+
+    <!-- Row 2: Time Slot -->
+    <Label text="Select Time Slot:" GridPane.rowIndex="2" GridPane.columnIndex="0"/>
+    <ComboBox fx:id="timeSlotComboBox" GridPane.rowIndex="2" GridPane.columnIndex="1"/>
+
+    <!-- Row 3: Course -->
+    <Label text="Select Course:" GridPane.rowIndex="3" GridPane.columnIndex="0"/>
+    <ComboBox fx:id="courseComboBox" GridPane.rowIndex="3" GridPane.columnIndex="1"/>
+
+    <!-- Row 4: Reason (optional) -->
+    <Label text="Enter Reason:" GridPane.rowIndex="4" GridPane.columnIndex="0"/>
+    <TextField fx:id="reasonField" GridPane.rowIndex="4" GridPane.columnIndex="1"
+               promptText="Optional"/>
+
+    <!-- Row 5: Comment (optional) -->
+    <Label text="Enter Comment:" GridPane.rowIndex="5" GridPane.columnIndex="0"/>
+    <TextField fx:id="commentField" GridPane.rowIndex="5" GridPane.columnIndex="1"
+               promptText="Optional"/>
+
+    <!-- Row 6: Buttons -->
+    <HBox spacing="10" alignment="CENTER_LEFT" GridPane.rowIndex="6" GridPane.columnIndex="1">
+        <Button text="Save" onAction="#handleSave"/>
+        <Button text="Back" onAction="#handleBack"/>
+    </HBox>
+</GridPane>

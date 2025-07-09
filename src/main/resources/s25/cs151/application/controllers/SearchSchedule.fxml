@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TableColumn?>
+
+<VBox xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1"
+      fx:controller="s25.cs151.application.controllers.SearchScheduleController"
+      spacing="10" alignment="CENTER"
+      prefHeight="400.0" prefWidth="600.0">
+
+    <HBox spacing="5" alignment="CENTER">
+        <Label text="Search:"/>
+        <TextField fx:id="searchField" promptText="Enter student name" prefWidth="200.0"/>
+        <Button text="Back" onAction="#handleBack"/>
+    </HBox>
+
+    <TableView fx:id="scheduleTable" prefHeight="300.0" prefWidth="580.0">
+        <columns>
+            <TableColumn fx:id="studentNameCol" text="Student Name" prefWidth="120.0"/>
+            <TableColumn fx:id="dateCol"        text="Date"         prefWidth="80.0"/>
+            <TableColumn fx:id="timeSlotCol"    text="Time Slot"    prefWidth="100.0"/>
+            <TableColumn fx:id="courseCol"      text="Course"       prefWidth="80.0"/>
+            <TableColumn fx:id="reasonCol"      text="Reason"       prefWidth="100.0"/>
+            <TableColumn fx:id="commentCol"     text="Comment"      prefWidth="100.0"/>
+            <TableColumn fx:id="actionCol"      text="Action"       prefWidth="60.0"/>
+        </columns>
+    </TableView>
+</VBox>
